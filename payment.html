@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ödeme - Yakında</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .coming {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .coming h1 {
+      font-size: 40px;
+      color: #00e676;
+    }
+    .coming p {
+      font-size: 18px;
+      margin-top: 15px;
+      color: #ccc;
+    }
+    .back-btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #00c853;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: .2s;
+    }
+    .back-btn:hover {
+      background: #00e676;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="coming">
+    <h1>Ödeme Sistemi Yakında!</h1>
+    <p>Satın alma sistemi şu an geliştirme aşamasında.<br>Yakında aktif olacak!</p>
+
+    <p style="margin-top:20px;font-size:16px;color:#888;">
+      Seçilen ürün: <span id="product" style="color:#00e676;"></span>
+    </p>
+
+    <a class="back-btn" href="/">← Mağazaya Geri Dön</a>
+  </div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("product").textContent = params.get("item") || "Bilinmiyor";
+</script>
+
+</body>
+</html>

@@ -1,74 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAXSMP Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ödeme - Yakında</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .coming {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .coming h1 {
+      font-size: 42px;
+      color: #00e676;
+    }
+    .coming p {
+      font-size: 18px;
+      margin-top: 15px;
+      color: #ccc;
+    }
+    .back-btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #00c853;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: .2s;
+    }
+    .back-btn:hover {
+      background: #00e676;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="hero">
-    <h1>FAXSMP STORE</h1>
-    <p>Minecraft sunucumuzun resmi mağazası</p>
-    <a href="#categories" class="btn">Mağazaya Git</a>
-  </header>
+  <div class="coming">
+    <h1>Ödeme Sistemi Yakında!</h1>
+    <p>Satın alma sistemi şu an geliştirme aşamasında.<br>Yakında aktif olacak!</p>
 
-  <section id="categories" class="section">
-    <h2>Kategoriler</h2>
+    <p style="margin-top:20px;font-size:16px;color:#888;">
+      Seçilen ürün: <span id="product" style="color:#00e676;"></span>
+    </p>
 
-    <div class="category-grid">
+    <a class="back-btn" href="/">← Mağazaya Geri Dön</a>
+  </div>
 
-      <a class="category-card">
-        <img src="https://static.planetminecraft.com/files/resource_media/screenshot/1636/shopgui-1_1186997.jpg" />
-        <h3>Ranklar</h3>
-      </a>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById("product").textContent = params.get("item") || "Bilinmiyor";
+</script>
 
-      <a class="category-card">
-        <img src="https://i.imgur.com/FIxXHzt.png" />
-        <h3>Krediler</h3>
-      </a>
-
-      <a class="category-card">
-        <img src="https://i.imgur.com/bzE8Hds.png" />
-        <h3>Kasalar</h3>
-      </a>
-
-    </div>
-  </section>
-
-  <section id="products" class="section">
-    <h2>Öne Çıkan Ürünler</h2>
-    <div class="product-grid">
-
-      <div class="product-card">
-        <h3>VIP Rank</h3>
-        <p>Sunucuda özel avantajlar elde edin</p>
-        <span class="price">₺29.99</span>
-        <button onclick="buy('VIP Rank')" class="btn">Satın Al</button>
-      </div>
-
-      <div class="product-card">
-        <h3>MVP Rank</h3>
-        <p>Daha fazla özel komut ve özellik</p>
-        <span class="price">₺49.99</span>
-        <button onclick="buy('MVP Rank')" class="btn">Satın Al</button>
-      </div>
-
-      <div class="product-card">
-        <h3>100 Kredi</h3>
-        <p>Kasalar ve kozmetikler için kredi</p>
-        <span class="price">₺19.99</span>
-        <button onclick="buy('100 Kredi')" class="btn">Satın Al</button>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 FAXSMP Store — Bu site Minecraft ile bağlantılı değildir.</p>
-  </footer>
-
-<script src="script.js"></script>
 </body>
 </html>

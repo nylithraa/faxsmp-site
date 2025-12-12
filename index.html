@@ -3,73 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAXSMP STORE</title>
+    <title>FAX SMP • Resmi Site</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>FAXSMP STORE</h1>
-            <p>Minecraft sunucumuzun resmi mağazası</p>
-            <a href="#kategoriler" class="hero-btn">Mağazaya Git</a>
-        </div>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">FAX SMP</div>
+        <nav>
+            <a href="#home">Ana Sayfa</a>
+	    <a href="https://faxsmp.fun/destek">Destek</a>
+            <a href="#about">Hakkında</a>
+            <a href="#modes">SMP Modları</a>
+            <a href="#join">Katıl</a>
+        </nav>
     </header>
 
-    <!-- KATEGORİLER -->
-    <section id="kategoriler" class="categories">
-        <h2>Kategoriler</h2>
-        <div class="category-list">
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1>FAX SMP'ye Hoş Geldin!</h1>
+        <p>4 farklı oyun modu ile gelişmiş, çok modlu Minecraft SMP platformu.</p>
 
-            <div class="category-card">
-                <img src="assets/rank.png" alt="Ranklar">
-                <h3>Ranklar</h3>
-            </div>
+        <div class="buttons">
+            <a href="https://discord.gg/" target="_blank" class="btn">Discord'a Katıl</a>
+            <div class="ip-box" onclick="copyIP()">IP: faxsmp.fun</div>
+        </div>
 
-            <div class="category-card">
-                <img src="assets/credit.png" alt="Krediler">
-                <h3>Krediler</h3>
-            </div>
+        <p id="copy-msg" class="hidden">IP başarıyla kopyalandı!</p>
+    </section>
 
-            <div class="category-card">
-                <img src="assets/crate.png" alt="Kasalar">
-                <h3>Kasalar</h3>
-            </div>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <h2>FAXSMP Nedir?</h2>
+        <p>
+            FAXSMP; içerisinde birden fazla oyun modu barındıran gelişmiş bir çoklu SMP platformudur.
+            Sunucuda 4 farklı SMP modu bulunur ve bu modlar oyunculara zamanla açılır.
+            Her SMP modu, kendi kuralları ve deneyimi ile farklı oyuncu tarzlarına hitap eder.
+        </p>
+    </section>
 
+    <!-- SMP MODLARI -->
+    <section id="modes" class="modes">
+        <h2>SMP Modları</h2>
+
+        <div class="mode">
+            <h3>1) Normal SMP (DontSMP)</h3>
+            <p>Klasik, kolaylaştırılmış ve ekonomi destekli hayatta kalma deneyimi. Rahat ve samimi bir SMP isteyen oyuncular için ideal.</p>
+        </div>
+
+        <div class="mode">
+            <h3>2) Vanilya SMP (Komutsuz)</h3>
+            <p>Gerçek Minecraft deneyimi. /tpa, /sethome, /warp yok. Her şey tamamen vanilya, doğal ve zorlayıcı.</p>
+        </div>
+
+        <div class="mode">
+            <h3>3) Dr. Hardcore</h3>
+            <p>
+                Ölünce kalıcı ban yok! Sistem senden şunu sorar:
+                <br><b>"Farklı bir dünyada yeniden doğmak ister misin?"</b><br>
+                - Evet → Yeni hardcore dünyasında tekrar doğarsın.<br>
+                - Hayır → Ölüm kalıcı olur.<br>
+                Gerçek risk ve adrenalin isteyen oyunculara özel.
+            </p>
+        </div>
+
+        <div class="mode">
+            <h3>4) Ultra OP SMP</h3>
+            <p>OP loot, hızlı gelişim, güçlü eşyalar ve yüksek tempolu bir deneyim. Hızlı güçlenip savaşmayı sevenler için.</p>
         </div>
     </section>
 
-    <!-- ÖNE ÇIKAN ÜRÜNLER -->
-    <section class="products">
-        <h2>Öne Çıkan Ürünler</h2>
-
-        <div class="product-list">
-
-            <div class="product-card">
-                <img src="assets/vip.png" alt="VIP">
-                <h3>VIP Rank</h3>
-                <p>Sunucu ayrıcalıklarının tadını çıkar!</p>
-                <button onclick="buy('VIP Rank')">Satın Al</button>
-            </div>
-
-            <div class="product-card">
-                <img src="assets/mvp.png" alt="MVP">
-                <h3>MVP Rank</h3>
-                <p>En sevilen üstün rank paketimiz!</p>
-                <button onclick="buy('MVP Rank')">Satın Al</button>
-            </div>
-
-            <div class="product-card">
-                <img src="assets/keys.png" alt="Anahtar">
-                <h3>KasA Anahtarı</h3>
-                <p>Özel ödüller için kasaları aç!</p>
-                <button onclick="buy('Kasa Anahtarı')">Satın Al</button>
-            </div>
-
-        </div>
+    <!-- JOIN -->
+    <section id="join" class="join">
+        <h2>Sunucuya Nasıl Katılırım?</h2>
+        <ul>
+            <li>Minecraft Java veya Bedrock sürümünü aç.</li>
+            <li>Multiplayer'a gir.</li>
+            <li>IP ekle: <b>faxsmp.fun</b></li>
+            <li>Aramıza katıl ve oynanmaya başla 🌿</li>
+        </ul>
     </section>
 
-    <script src="script.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        © 2025 FAX SMP • Resmi Sunucu Sitesi
+    </footer>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("faxsmp.fun");
+            document.getElementById("copy-msg").classList.remove("hidden");
+
+            setTimeout(() => {
+                document.getElementById("copy-msg").classList.add("hidden");
+            }, 1500);
+        }
+    </script>
+
 </body>
 </html>

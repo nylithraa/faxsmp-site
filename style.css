@@ -1,131 +1,262 @@
-/* Genel Ayarlar */
+/* ---------------------------------------------------
+   GLOBAL RESET
+--------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0e0e0e;
-    color: #fff;
+    background: #0d0d0d;
+    color: white;
 }
 
-/* HERO */
-.hero {
-    background: url("assets/hero.jpg") center/cover no-repeat;
-    height: 60vh;
+/* ---------------------------------------------------
+   HEADER
+--------------------------------------------------- */
+header {
+    width: 100%;
+    padding: 20px 40px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    background: #111;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    border-bottom: 2px solid #4de8ff22;
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin: 0;
-    animation: fadeIn 1s ease;
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #4de8ff;
+    letter-spacing: 1px;
 }
 
-.hero-content p {
-    margin-top: 10px;
-    font-size: 18px;
-    opacity: 0.8;
-}
-
-.hero-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: #00aaff;
-    border-radius: 6px;
+nav a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: white;
+    margin-left: 25px;
+    font-weight: 400;
     transition: 0.3s;
 }
 
-.hero-btn:hover {
-    background: #0077cc;
-    transform: scale(1.05);
+nav a:hover {
+    color: #4de8ff;
 }
 
-/* Animasyon */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* KATEGORİLER */
-.categories {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.category-list {
+/* ---------------------------------------------------
+   HERO SECTION
+--------------------------------------------------- */
+.hero {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.category-card {
-    background: #151515;
-    width: 240px;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.category-card:hover {
-    transform: scale(1.05);
-    background: #1d1d1d;
-}
-
-.category-card img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* ÜRÜNLER */
-.products {
-    padding: 50px 20px;
+    align-items: center;
     text-align: center;
+    padding-top: 80px;
+
+    background: url('https://wallpapercave.com/wp/wp9104354.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
 }
 
-.product-list {
+.hero h1 {
+    font-size: 54px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px black;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    text-shadow: 0 0 6px black;
+}
+
+/* HERO BUTTONS */
+.buttons {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.product-card {
-    background: #151515;
-    width: 260px;
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-    background: #1f1f1f;
-}
-
-.product-card img {
-    width: 100%;
+.btn {
+    background: #4de8ff;
+    padding: 10px 25px;
+    color: black;
+    text-decoration: none;
     border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #4de8ff55;
 }
 
-.product-card button {
-    margin-top: 15px;
-    padding: 12px 20px;
-    background: #00aaff;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 6px;
+.btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 13px #4de8ffaa;
+}
+
+/* IP BOX */
+.ip-box {
+    padding: 10px 20px;
+    background: #222;
+    border: 1px solid #4de8ff;
+    border-radius: 8px;
     cursor: pointer;
+    color: #4de8ff;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.ip-box:hover {
+    background: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---------------------------------------------------
+   GLOBAL SECTION FORMAT
+--------------------------------------------------- */
+section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4de8ff;
+}
+
+section p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ---------------------------------------------------
+   ABOUT
+--------------------------------------------------- */
+.about p {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+/* ---------------------------------------------------
+   SMP MODES
+--------------------------------------------------- */
+.modes {
+    padding-top: 40px;
+}
+
+.mode {
+    background: #111;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 900px;
+    border-radius: 10px;
+    border-left: 4px solid #4de8ff;
+    box-shadow: 0 0 10px #4de8ff22;
     transition: 0.3s;
 }
 
-.product-card button:hover {
-    background: #0077cc;
-    transform: scale(1.05);
+.mode:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #4de8ff55;
+}
+
+.mode-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* ---------------------------------------------------
+   JOIN SECTION
+--------------------------------------------------- */
+.join ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.join li {
+    margin: 8px 0;
+    font-size: 18px;
+}
+
+/* ---------------------------------------------------
+   MARKET PAGE
+--------------------------------------------------- */
+.market-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.product {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border-left: 4px solid #4de8ff;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px #4de8ff22;
+}
+
+.product img {
+    width: 220px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product .buy-btn {
+    background: #4de8ff;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ---------------------------------------------------
+   SUPPORT PAGE
+--------------------------------------------------- */
+.support-box {
+    background: #111;
+    padding: 25px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 10px;
+    border-left: 4px solid #4de8ff;
+}
+
+.discord-btn {
+    background: #5865F2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 2px solid #4de8ff22;
 }
